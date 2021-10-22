@@ -8,5 +8,15 @@ string_match('abc', 'abc') → 2
 string_match('abc', 'axc') → 0
 
 """
+
+
 def string_match(a, b):
+    count = 0
+    for items in range(min(len(a), len(b)) -1):
+        if a[items:items + 2] == b[items: items + 2]:
+            count += 1
+
+    return count
+
+
 
