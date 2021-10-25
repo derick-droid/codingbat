@@ -8,5 +8,15 @@ combo_string('hi', 'Hello') → 'hiHellohi'
 combo_string('aaa', 'b') → 'baaab'
 
 """
-def combo_string(str):
+
+
+def combo_string(a, b):
+    if len(a) == len(b):
+        return False
+    else:
+        if len(a) > len(b):
+            return (b + a + b)
+        elif len(b) > len(a):
+            return (a + b + a)
+
 
