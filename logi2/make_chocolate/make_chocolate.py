@@ -10,10 +10,13 @@ make_chocolate(4, 1, 7) → 2
 
 
 def make_chocolate(small, big, goal):
-    lbig  = goal / 5
-    if small <= lbig:
-        print(lbig)
+    small_choco = goal - (big * 5)
+    if goal > (big * 5) + small:
+        return -1
+    elif (small_choco <= small) and (small_choco >= 0):
+        return small_choco
+    elif small_choco < 0 and goal % 5 <= small:
+        return goal % 5
     else:
-        print(-1)
+        return -1
 
-d = make_chocolate(4, 1, 9)
