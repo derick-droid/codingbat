@@ -19,4 +19,4 @@ def sum13(nums):
 
     return summation
 
-d = sum13([1, 2, 2, 1])
+
